@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+
+    <title>xdlinux/xdbook @ xdlinux.info</title>
+    <script type="text/javascript"
+      src="http://xdlinux.info/mathjax/MathJax.js?config=default" ></script>
+    <style type="text/css">
+      body {
+        margin-top: 1.0em;
+        background: #e1e1e1 repeat url(body_bg.png) 0 0;
+        background-attachment: fixed;
+        font-family: Helvetica, Arial, FreeSans, san-serif;
+        text-shadow: 1px 1px 0px #FFFFFF;
+        color: #000;
+      }
+      #container {
+        margin: 0 auto;
+        width: 800px;
+      }
+      h1 { font-size: 3.8em; color: #07337b; margin-bottom: 3px; }
+      h1 .small { font-size: 0.4em; }
+      h1 a { text-decoration: none }
+      h2 { font-size: 1.5em; color: #07337b; }
+      h4 { font-size: 1.3em; color: #07337b; }
+      h3 { text-align: center; color: #07337b; }
+      a { color: #3066bd;text-decoration:none; }
+      .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+      .download { float: right; }
+      pre { background: #000; color: #fff; padding: 15px;text-shadow:none;}
+      hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+      .footer { text-align:center; padding-top:30px; font-style: italic; }
+    </style>
+  </head>
+
+  <body>
+    <a href="https://github.com/xdlinux"><img style="position: absolute; top: 0; right: 0; border: 0;"
+      src="fork.png" alt="Fork me on GitHub" /></a>
+
+    <div id="container">
+
+      <div class="download">
+        <a href="http://xdlinux.info/books/book.html">
+          <img border="0" width="64" src="zip.png"
+          alt="下载xdbook目录"/></a>
+        <span style="margin:0 8px;"></span>
+        <a href="https://github.com/xdlinux/xdba-thesis/commits/master.atom">
+          <img border="0" width="64" src="rss.png" alt="订阅更新">
+        </a>
+      </div>
+
+      <h1><a href="https://github.com/xdlinux/xdba-thesis">xdbook</a>
+        <span class="small">by <a href="https://github.com/xdlinux">西电开源社区</a></span></h1>
+
+      <div class="description">
+        xdbook 系图书共享与知识交流的一个资源库
+      </div>
+
+
+      <p>
+      本项目是为大家提供一个数据资源库，以方便书籍共享和知识交流。旨在为大家提供学习的资料，研究分析的数据库和算法演习的资源库。通过FTP这种通用性比较强的网络协议为基本接口，方便大家充分的利用这些资源，各显其能。希望有更多的同学在这些库的基础上作出成果，更希望能有更多的人来完善这些些库的内容作出贡献。
+      </p>
+    
+      <p>
+      有很多人不太了解这个项目，那么请看下面的内容。 
+      </p>
+      <h2>浏览xdbook</h2>
+    
+      <p>xdbook采用ftp协议来传播，<a href="en.wikipedia.org/wiki/File_Transfer_Protocol">FTP:File Transfer Protocol</a>网络中比较古老的协议之一，至今约有40年历史,但是仍然非常高效稳定，其通用性强，各种支持丰富。浏览xdbook的本质就是和FTP打交道，其中FTPS就是加密的FTP。</p>
+      <h4>通过浏览器</h4>
+      <p><a href="ftp://xdlinux.info/books">ftp://xdlinux.info/books</a> ftp入口这个不是很便于检索。</p>
+      <p><a href="http://ftp.xdlinux.info/books/book.html">http://ftp.xdlinux.info/books/book.html</a>  intijk 生成的一个便于文件名检索的页面有些大打开起来比较慢可以下载下来用。检索方式是打开这个页面然后Ctrl + F就OK了，这里再介绍一个chrome插件Find Many Strings可以高亮多个词。</p>
+      <p><a href="http://ftp.xdlinux.info/books">http://ftp.xdlinux.info/books</a> http入口，呵呵有些地方只能上http不能上ftp。</p>
+      <p>注意:</br>
+      1.你输入http://xdlinux.info/books 是不行的因为为了安全我们加入ftp.xdlinux.info这个子域名，这个域名下的http服务是没有任何脚本执行权限的只有文件传输权限。</br>
+      2.ftp:// 或是 http:// 表示用的是什么协议访问，ftp.xdlinux.info 表示域名 DNS 服务会将这个名字转换成ip地址，/books表示的是http服务端中的路径。</br>
+      3.xdbook的ftp服务采用匿名方式登录，只有下载权限。其实写全了应该是这样的:ftp://ftp:ftp@xdlinux.info/books 其中@前面的ftp:ftp 就是 用户名:密码 匿名登录的时候默认 用户名 ftp 密码 ftp</p>
+
+      <h4>通过文件管理器</h4>
+     
+      <p>在文件管理器的地址栏里面加入<a href="ftp://xdlinux.info/books">ftp://xdlinux.info/books</a>就可以像本地的文件夹一样浏览xdbook了，当然可以拖拽和搜索了。</p>
+
+      <p>注意:</br>
+      1.其实大部分文件管理器支持ftp协议，像gnome的nautilus还支持sftp等协议。一个好的文件管理器不但可以多面板还支持多种文件协议。</br>
+      2.当然有一天你被逼无奈只有windows的时候，windows 的资源管理器explorer也是可以这样做的，ie和资源管理器其实是一个核心两个界面，你在资源管理器里面也可以浏览网页。当然还有温馨的映射到本地磁盘功能。</br>
+      3.对于linux一旦变成本地的文件夹那么你就高兴了，即使是文件管理器的搜索功能都非常强悍，但是windows的搜索就慢多了，这里介绍一个工具findutils for win，GNUwin32的作品。</p>
+    
+      <h4>通过ftp客户端</h4>
+
+      <p>Filezilla 可以通过你喜欢的包管理器安装得到。其功能非常丰富，而且异常稳定。剩下的就靠大家自行发掘了。另:windows版本，可以到<a href="ftp://xdlinux.info/extra">extra</a>目录下找到。</p>
+      <p>Firefox 的firezilla这个插件也非常优秀。</p>
+      <p>windows 中也有一些优秀的ftp客户端包括FlashFXP。</p>
+
+      <h4>通过命令行</h4>
+
+      <p>ftp是一个非常通用的ftp工具。lftp 是一个非常优秀的命令行的ftp工具，其中的find命令非常灵活高效。</p>
+
+      <h4>通过程序</h4>
+
+      <p>可以通过，perl 和 python 的ftp 库来访问。</p>
+    
+      <h2>使用xdbook</h2>
+
+      <p>其实这个才是建立这个根本目的</p>
+
+      <h4>资源的整理、整合和检索</h4>
+  
+      <p>书目比较多，如何有效的整合资源，组织这些资料是一个值得关注的问题，使得大家更容易的得到想要的信息和书目，如何有机的组织这些材料来促进大家的学习。这些都是功德无量的事情，涉及到的学科和算法，都是可以用xdbook当作数据库来实践。</p>
+
+      <h4>书目的上传、征集和添加相关信息</h4>
+
+      <p>书目虽然多，但是，还需要大家的贡献使得这个库更加好用和丰富，库中有些书不是很清晰，也需要更新，在不断的丰富xdbook的时候，也是督促自己学习的过程。</p>
+
+      <p>yanlin 做过相关的工作没就是通过图书的封皮，来查找图书的全部信息，这个很值得借鉴。</p>
+
+      <h4>apt-xdbook</h4>
+
+      <p>当然有人想用ABS 或是 像archlinux的AUR 源那样，分布式的来管理图书，更是促进大家更快的获得信息、知识和智慧。</p>
+
+      <p>希望大家能从xdbook中获得灵感创造出能为推动人类智慧发展作出贡献的东西。正确的信息流动的速度越快，群体的智慧越高，随着你周围的人水平上去了，你的水平也会得到提升。</p>
+
+      <h2>联系人</h2>
+
+      <p>lvzongting &lt;lvzongting@gmail.com&gt;</p> 
+  
+      <h2>目录下载</h2>
+      <p>
+      <ul>
+        <li><a href="http://xdlinux.info/books/book.html">xdbook目录</a></li>
+      </ul>
+      </p>
+      <h2>贡献者</h2> 
+      <p>
+      xdbook 是由很多人的贡献才到今天这个规模，其中包括lvzongting从超星数据库中下载得到的一部分数学书，有jjm精心整理和贡献的关于通信的相当丰盛的一批书籍，当然现在jjm已经是编码届大牛的学生了，huruinan贡献的非常大的一批关于电子设计的图书和资料，bigeagle贡献的一批关于编程和linux还有计算机基本理论的一些图书，还有intijk，carl_xwz，小九，flyer，andy_feng等等贡献的自己精心整理一批经典的图书。其中flyer贡献了许多自己学习、看书的笔记和心得。其后会有一份详细的贡献者列表记录着所有为提供大量知识的人。共享知识，传播智慧的人功德无量，在这里也祝他们前程似锦，得无尚智慧。 </p>
+ 
+<!--      <p>获取源代码:
+      <pre>$ git clone git://github.com/xdlinux/xdba-thesis</pre>
+      </p>
+
+      <div class="footer">
+        访问Github获取源代码 : <a href="https://github.com/xdlinux/xdba-thesis">xdlinux/xdba-thesis</a>
+      </div>
+-->
+      <div class="footer">
+        Powerby:lvzongting@gmail.com
+      </div>
+
+    </div>
+
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-23877548-2");
+        pageTracker._trackPageview();
+        } catch(err) {}</script>
+    </body>
+  </html>
+ 
